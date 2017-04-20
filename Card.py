@@ -1,3 +1,5 @@
+
+
 class Card(object):
     """Represents a standard playing card.
 
@@ -10,7 +12,7 @@ class Card(object):
     rank_names = [None, "Ace", "2", "3", "4", "5", "6", "7",
                   "8", "9", "10", "Jack", "Queen", "King"]
 
-    def __init__(self, suit=0, rank=2):
+    def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
 
