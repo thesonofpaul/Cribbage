@@ -5,10 +5,11 @@ POINTS_TO_WIN = 121
 
 class Player(object):
 
-    def __init__(self, name):
+    def __init__(self, name, is_agent):
         self.name = name
         self.hand = Hand.Hand(6)
         self.points = 0
+        self.is_agent = is_agent
 
     def add_points(self, num):
         self.points += num
