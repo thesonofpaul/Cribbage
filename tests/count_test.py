@@ -1,11 +1,14 @@
 import unittest
 import Game
+import Player
 
 
 class TestCount(unittest.TestCase):
 
     def setUp(self):
-        self.game = Game.Game()
+        test_player1 = Player.Player("Player 1", False)
+        test_player2 = Player.Player("Player 2", False)
+        self.game = Game.Game(test_player1, test_player2)
 
     def test_deal(self):
         self.game.deal()
