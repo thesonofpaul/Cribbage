@@ -9,6 +9,4 @@ How to Play
       parameters are for player type
       choices are bot or player
      
-    ex. 'python Game.py player player'
-    ex. 'python Game.py bot player'
-    ex. 'python Game.py bot bot'
+    ex. 'python Game.py player player'    'python Game.py bot player'      'python Game.py bot bot'
