@@ -67,10 +67,9 @@ def discard(cards, is_crib):
             best_discards = discards
             max_total = total
 
-    print "*****AGENT DISCARDS*****"
+    print "*****DISCARDS DECISION*****"
     for card in best_discards:
         print card
-    print "************************"
     return best_discards
 
 
@@ -120,7 +119,6 @@ def count_cards(hand, played_cards, current_score):
         if score > max_score:
             best_card = card
             max_score = score
-    print "*****AGENT COUNT CARD*****"
+    print "*****COUNT CARD DECISION*****"
     print best_card
-    print "**************************"
     return best_card

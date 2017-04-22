@@ -4,6 +4,7 @@ import Hand
 import Points
 import Card
 import Agent
+import sys
 
 TOTAL_CARDS = 8
 COUNT_LIMIT = 31
@@ -252,8 +253,26 @@ class Game(object):
 
 
 if __name__ == '__main__':
-    player1 = Player.Player("Agent", True)
-    player2 = Player.Player("Bot", True)
+    if len(sys.argv) > 2:
+        if str(sys.argv[1]) == 'bot':
+            player1 = Player.Player("Player 1", True)
+        elif str(sys.argv[1]) == 'player':
+            player1 = Player.Player("Player 1", False)
+        else:
+            print "Ivalid value for player 1..."
+            sys.exit()
+
+        if str(sys.argv[2]) == 'bot':
+            player2 = Player.Player("Player 2", True)
+        elif str(sys.argv[2]) == 'player':
+            player2 = Player.Player("Player 2", False)
+        else:
+            print "Ivalid value for player 2..."
+            sys.exit()
+    else:
+        player1 = Player.Player("Agent", True)
+        player2 = Player.Player("Bot", True)
+
     game = Game(player1, player2)
 
     while game.player1.points < 121 and game.player2.points < 121:
@@ -271,5 +290,4 @@ if __name__ == '__main__':
         print "*****SCORE*****"
         print "%s: %d points" % (game.player1.name, game.player1.points)
         print "%s: %d points" % (game.player2.name, game.player2.points)
-        print "***************"
 
